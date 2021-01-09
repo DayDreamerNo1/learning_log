@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'learning_logs',
     'users',
 
+    # 第三方应用程序
+    'bootstrap4',
+
     # 默认添加的应用程序
     'django.contrib.admin',
     'django.contrib.auth',
@@ -127,3 +130,7 @@ STATIC_URL = '/static/'
 
 # 我的设置
 LOGIN_URL = 'users:login'
+
+# Heroku 设置
+import django_heroku
+django_heroku.settings(locals())
